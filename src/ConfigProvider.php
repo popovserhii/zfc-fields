@@ -8,12 +8,12 @@
  * https://opensource.org/licenses/MIT
  *
  * @category Popov
- * @package Popov_ZfcPermission
+ * @package Popov_ZfcFields
  * @author Serhii Popov <popow.serhii@gmail.com>
  * @license https://opensource.org/licenses/MIT The MIT License (MIT)
  */
 
-namespace Popov\ZfcPermission;
+namespace Popov\ZfcFields;
 
 class ConfigProvider
 {
