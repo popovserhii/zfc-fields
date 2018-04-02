@@ -1,0 +1,33 @@
+Magere\Fields\Model\Fields:
+  type: entity
+  table: fields
+  fields:
+    id:
+      id: true
+      type: integer
+      generator:
+        strategy: AUTO
+      options:
+        unsigned: true
+    name:
+      type: string
+      length: 255
+    mnemo:
+      type: string
+      length: 50
+    entityId:
+      type: integer
+      nullable: true
+      options:
+        unsigned: true
+  manyToOne:
+    entity:
+      targetEntity: Magere\Entity\Model\Entity
+      inversedBy: fields
+      joinColumn:
+        name: entityId
+        referencedColumnName: id
+  oneToMany:
+    fieldsPages:
+      targetEntity: Magere\Fields\Model\FieldsPages
+      mappedBy: fields

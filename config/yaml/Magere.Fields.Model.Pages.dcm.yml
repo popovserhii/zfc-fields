@@ -1,0 +1,21 @@
+Magere\Fields\Model\Pages:
+  type: entity
+  table: pages
+  fields:
+    id:
+      id: true
+      type: integer
+      generator:
+        strategy: AUTO
+      options:
+        unsigned: true
+    page:
+      type: string
+      length: 255
+  oneToMany:
+    fieldsPages:
+      targetEntity: Magere\Fields\Model\FieldsPages
+      mappedBy: pages
+    permissionSettingsPages:
+      targetEntity: Magere\Permission\Model\PermissionSettingsPages
+      mappedBy: pages

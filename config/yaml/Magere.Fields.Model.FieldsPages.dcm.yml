@@ -1,0 +1,34 @@
+Magere\Fields\Model\FieldsPages:
+  type: entity
+  table: fields_pages
+  fields:
+    id:
+      id: true
+      type: integer
+      generator:
+        strategy: AUTO
+      options:
+        unsigned: true
+    fieldsId:
+      type: integer
+      options:
+        unsigned: true
+    pagesId:
+      type: integer
+      options:
+        unsigned: true
+    position:
+      type: integer
+  manyToOne:
+    fields:
+      targetEntity: Magere\Fields\Model\Fields
+      inversedBy: fieldsPages
+      joinColumn:
+        name: fieldsId
+        referencedColumnName: id
+    pages:
+      targetEntity: Magere\Fields\Model\Pages
+      inversedBy: fieldsPages
+      joinColumn:
+        name: pagesId
+        referencedColumnName: id
