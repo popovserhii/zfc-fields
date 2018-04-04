@@ -20,8 +20,8 @@ class ConfigProvider
     public function __invoke()
     {
         $config = require __DIR__ . '/../config/module.config.php';
-        unset($config['controllers']);
-        unset($config['view_manager']);
+        //unset($config['controllers']);
+        //unset($config['view_manager']);
 
         return $config;
     }

@@ -1,8 +1,9 @@
 <?php
 
-namespace Magere\Fields\Model;
+namespace Popov\ZfcFields\Model;
 
 use Doctrine\ORM\Mapping as ORM;
+use Popov\ZfcPermission\Model\PermissionSettingsPages;
 
 /**
  * Pages
@@ -74,10 +75,10 @@ class Pages
     /**
      * Add fieldsPages
      *
-     * @param \Magere\Fields\Model\FieldsPages $fieldsPages
+     * @param \Popov\ZfcFields\Model\FieldsPages $fieldsPages
      * @return Pages
      */
-    public function addFieldsPage(\Magere\Fields\Model\FieldsPages $fieldsPages)
+    public function addFieldsPage(\Popov\ZfcFields\Model\FieldsPages $fieldsPages)
     {
         $this->fieldsPages[] = $fieldsPages;
 
@@ -87,9 +88,9 @@ class Pages
     /**
      * Remove fieldsPages
      *
-     * @param \Magere\Fields\Model\FieldsPages $fieldsPages
+     * @param \Popov\ZfcFields\Model\FieldsPages $fieldsPages
      */
-    public function removeFieldsPage(\Magere\Fields\Model\FieldsPages $fieldsPages)
+    public function removeFieldsPage(\Popov\ZfcFields\Model\FieldsPages $fieldsPages)
     {
         $this->fieldsPages->removeElement($fieldsPages);
     }
@@ -107,10 +108,10 @@ class Pages
     /**
      * Add permissionSettingsPages
      *
-     * @param \Magere\Permission\Model\PermissionSettingsPages $permissionSettingsPages
+     * @param PermissionSettingsPages $permissionSettingsPages
      * @return Pages
      */
-    public function addPermissionSettingsPage(\Magere\Permission\Model\PermissionSettingsPages $permissionSettingsPages)
+    public function addPermissionSettingsPage(PermissionSettingsPages $permissionSettingsPages)
     {
         $this->permissionSettingsPages[] = $permissionSettingsPages;
 
@@ -120,9 +121,9 @@ class Pages
     /**
      * Remove permissionSettingsPages
      *
-     * @param \Magere\Permission\Model\PermissionSettingsPages $permissionSettingsPages
+     * @param PermissionSettingsPages $permissionSettingsPages
      */
-    public function removePermissionSettingsPage(\Magere\Permission\Model\PermissionSettingsPages $permissionSettingsPages)
+    public function removePermissionSettingsPage(PermissionSettingsPages $permissionSettingsPages)
     {
         $this->permissionSettingsPages->removeElement($permissionSettingsPages);
     }

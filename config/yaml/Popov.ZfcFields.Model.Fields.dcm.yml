@@ -1,4 +1,4 @@
-Magere\Fields\Model\Fields:
+Popov\ZfcFields\Model\Fields:
   type: entity
   table: fields
   fields:
@@ -22,12 +22,12 @@ Magere\Fields\Model\Fields:
         unsigned: true
   manyToOne:
     entity:
-      targetEntity: Magere\Entity\Model\Entity
+      targetEntity: Popov\ZfcEntity\Model\Entity
       inversedBy: fields
       joinColumn:
         name: entityId
         referencedColumnName: id
   oneToMany:
     fieldsPages:
-      targetEntity: Magere\Fields\Model\FieldsPages
+      targetEntity: Popov\ZfcFields\Model\FieldsPages
       mappedBy: fields

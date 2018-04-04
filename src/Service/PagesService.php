@@ -1,5 +1,5 @@
 <?php
-namespace Magere\Fields\Service;
+namespace Popov\ZfcFields\Service;
 
 use Doctrine\ORM\EntityRepository,
 	Magere\Agere\Service\AbstractEntityService;

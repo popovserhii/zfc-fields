@@ -1,16 +1,16 @@
 <?php
-namespace Magere\Fields\View\Helper;
+namespace Popov\ZfcFields\View\Helper;
 
 use Agere\Simpler\Plugin\SimplerPlugin;
 use Zend\View\Helper\AbstractHelper,
 	Magere\Agere\String\StringUtils as AgereString,
 	Magere\Users\Acl\Acl,
-	Magere\Fields\Service\FieldsService;
+	Popov\ZfcFields\Service\FieldsService;
 
 class Fields extends AbstractHelper
 {
 	/**
-	 * @var \Magere\Fields\Service\FieldsService
+	 * @var \Popov\ZfcFields\Service\FieldsService
 	 */
 	protected $_fieldsService;
 

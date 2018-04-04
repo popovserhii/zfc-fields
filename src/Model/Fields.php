@@ -1,8 +1,10 @@
 <?php
 
-namespace Magere\Fields\Model;
+namespace Popov\ZfcFields\Model;
 
 use Doctrine\ORM\Mapping as ORM;
+use Popov\ZfcEntity\Model\Entity;
+use Popov\ZfcFields\Model\FieldsPages;
 
 /**
  * Fields
@@ -35,7 +37,7 @@ class Fields
 	private $fieldsPages;
 
 	/**
-	 * @var \Magere\Entity\Model\Entity
+	 * @var Entity
 	 */
 	private $entity;
 
@@ -129,10 +131,10 @@ class Fields
 	/**
 	 * Add fieldsPages
 	 *
-	 * @param \Magere\Fields\Model\FieldsPages $fieldsPages
+	 * @param \Popov\ZfcFields\Model\FieldsPages $fieldsPages
 	 * @return Fields
 	 */
-	public function addFieldsPage(\Magere\Fields\Model\FieldsPages $fieldsPages)
+	public function addFieldsPage(\Popov\ZfcFields\Model\FieldsPages $fieldsPages)
 	{
 		$this->fieldsPages[] = $fieldsPages;
 
@@ -142,9 +144,9 @@ class Fields
 	/**
 	 * Remove fieldsPages
 	 *
-	 * @param \Magere\Fields\Model\FieldsPages $fieldsPages
+	 * @param \Popov\ZfcFields\Model\FieldsPages $fieldsPages
 	 */
-	public function removeFieldsPage(\Magere\Fields\Model\FieldsPages $fieldsPages)
+	public function removeFieldsPage(FieldsPages $fieldsPages)
 	{
 		$this->fieldsPages->removeElement($fieldsPages);
 	}
@@ -162,10 +164,10 @@ class Fields
 	/**
 	 * Set entity
 	 *
-	 * @param \Magere\Entity\Model\Entity $entity
+	 * @param Entity $entity
 	 * @return Fields
 	 */
-	public function setEntity(\Magere\Entity\Model\Entity $entity = null)
+	public function setEntity(Entity $entity = null)
 	{
 		$this->entity = $entity;
 
@@ -175,7 +177,7 @@ class Fields
 	/**
 	 * Get entity
 	 *
-	 * @return \Magere\Entity\Model\Entity
+	 * @return Entity
 	 */
 	public function getEntity()
 	{

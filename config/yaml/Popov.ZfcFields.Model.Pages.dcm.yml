@@ -1,4 +1,4 @@
-Magere\Fields\Model\Pages:
+Popov\ZfcFields\Model\Pages:
   type: entity
   table: pages
   fields:
@@ -14,8 +14,8 @@ Magere\Fields\Model\Pages:
       length: 255
   oneToMany:
     fieldsPages:
-      targetEntity: Magere\Fields\Model\FieldsPages
+      targetEntity: Popov\ZfcFields\Model\FieldsPages
       mappedBy: pages
     permissionSettingsPages:
-      targetEntity: Magere\Permission\Model\PermissionSettingsPages
+      targetEntity: Popov\ZfcPermission\Model\PermissionSettingsPages
       mappedBy: pages

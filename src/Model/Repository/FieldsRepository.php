@@ -1,9 +1,10 @@
 <?php
-namespace Magere\Fields\Model\Repository;
+namespace Popov\ZfcFields\Model\Repository;
 
-use Doctrine\ORM\Query\ResultSetMapping,
-	Doctrine\ORM\Query\ResultSetMappingBuilder,
-	Magere\Agere\ORM\EntityRepository;
+use Doctrine\ORM\Query\ResultSetMapping;
+use	Doctrine\ORM\Query\ResultSetMappingBuilder;
+use Popov\ZfcCore\Service\EntityRepository;
+
 
 class FieldsRepository extends EntityRepository {
 

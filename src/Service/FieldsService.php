@@ -1,5 +1,5 @@
 <?php
-namespace Magere\Fields\Service;
+namespace Popov\ZfcFields\Service;
 
 use Doctrine\ORM\EntityRepository;
 use Magere\Agere\Service\AbstractEntityService;
@@ -14,7 +14,7 @@ class FieldsService extends AbstractEntityService {
 	 */
 	public function getAllByEntity($entity)
 	{
-		/** @var \Magere\Fields\Model\Repository\FieldsRepository $repository */
+		/** @var \Popov\ZfcFields\Model\Repository\FieldsRepository $repository */
 		$repository = $this->getRepository($this->_repositoryName);
 
 		return $repository->findAllByEntityMnemo($entity->getMnemo());
@@ -22,7 +22,7 @@ class FieldsService extends AbstractEntityService {
 
     public function getAllByEntityName($entityName)
     {
-        /** @var \Magere\Fields\Model\Repository\FieldsRepository $repository */
+        /** @var \Popov\ZfcFields\Model\Repository\FieldsRepository $repository */
         $repository = $this->getRepository($this->_repositoryName);
 
         return $repository->findAllByEntityMnemo($entityName);
@@ -38,7 +38,7 @@ class FieldsService extends AbstractEntityService {
 	 */
 	public function getRequiredFields($target, $type, $parent, $required, $typeField = 'required')
 	{
-		/** @var \Magere\Fields\Model\Repository\FieldsRepository $repository */
+		/** @var \Popov\ZfcFields\Model\Repository\FieldsRepository $repository */
 		$repository = $this->getRepository($this->_repositoryName);
 
 		return $repository->findRequiredFields($target, $type, $parent, $required, $typeField);
@@ -73,7 +73,7 @@ class FieldsService extends AbstractEntityService {
 	 */
 	public function getFieldsByRole($target, $roleId, $filedVals = '')
 	{
-		/** @var \Magere\Fields\Model\Repository\FieldsRepository $repository */
+		/** @var \Popov\ZfcFields\Model\Repository\FieldsRepository $repository */
 		$repository = $this->getRepository($this->_repositoryName);
 
 		$items = $repository->findFieldsByRole($target, $roleId);
@@ -93,7 +93,7 @@ class FieldsService extends AbstractEntityService {
 	 */
 	public function getAllFieldsByRole($target, $roleId)
 	{
-		/** @var \Magere\Fields\Model\Repository\FieldsRepository $repository */
+		/** @var \Popov\ZfcFields\Model\Repository\FieldsRepository $repository */
 		$repository = $this->getRepository($this->_repositoryName);
 
 		return $repository->findAllFieldsByRole($target, $roleId);

@@ -1,5 +1,5 @@
 <?php
-namespace Magere\Fields\Service;
+namespace Popov\ZfcFields\Service;
 
 use Doctrine\ORM\EntityRepository,
 	Magere\Agere\Service\AbstractEntityService;
@@ -16,7 +16,7 @@ class FieldsPagesService extends AbstractEntityService {
 	 */
 	public function getFieldsByPage($page = '', $fieldToArray = '')
 	{
-		/** @var \Magere\Fields\Model\Repository\FieldsPagesRepository $repository */
+		/** @var \Popov\ZfcFields\Model\Repository\FieldsPagesRepository $repository */
 		$repository = $this->getRepository($this->_repositoryName);
 
 		$items = $repository->findFieldsByPage($page);
@@ -36,7 +36,7 @@ class FieldsPagesService extends AbstractEntityService {
 	 */
 	public function getFieldsByIds(array $ids, $valToArray = '')
 	{
-		/** @var \Magere\Fields\Model\Repository\FieldsPagesRepository $repository */
+		/** @var \Popov\ZfcFields\Model\Repository\FieldsPagesRepository $repository */
 		$repository = $this->getRepository($this->_repositoryName);
 
 		$items = $repository->findFieldsByIds($ids);
@@ -54,7 +54,7 @@ class FieldsPagesService extends AbstractEntityService {
 	 */
 	public function getNotAddPermission()
 	{
-		/** @var \Magere\Fields\Model\Repository\FieldsPagesRepository $repository */
+		/** @var \Popov\ZfcFields\Model\Repository\FieldsPagesRepository $repository */
 		$repository = $this->getRepository($this->_repositoryName);
 
 		return $repository->findNotAddPermission();

@@ -5,9 +5,9 @@
  * @author Popov Sergiy <popov@agere.com.ua>
  * @datetime: 02.05.2016 21:00
  */
-namespace Magere\Fields\View\Helper\Factory;
+namespace Popov\ZfcFields\View\Helper\Factory;
 
-use Magere\Fields\View\Helper\Fields;
+use Popov\ZfcFields\View\Helper\Fields;
 
 class FieldFactory
 {

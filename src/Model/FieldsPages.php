@@ -1,8 +1,10 @@
 <?php
 
-namespace Magere\Fields\Model;
+namespace Popov\ZfcFields\Model;
 
 use Doctrine\ORM\Mapping as ORM;
+use Popov\ZfcFields\Model\Fields;
+use Popov\ZfcFields\Model\Pages;
 
 /**
  * FieldsPages
@@ -30,12 +32,12 @@ class FieldsPages
 	private $position;
 
     /**
-     * @var \Magere\Fields\Model\Fields
+     * @var \Popov\ZfcFields\Model\Fields
      */
     private $fields;
 
     /**
-     * @var \Magere\Fields\Model\Pages
+     * @var \Popov\ZfcFields\Model\Pages
      */
     private $pages;
 
@@ -122,10 +124,10 @@ class FieldsPages
     /**
      * Set fields
      *
-     * @param \Magere\Fields\Model\Fields $fields
+     * @param Fields $fields
      * @return FieldsPages
      */
-    public function setFields(\Magere\Fields\Model\Fields $fields = null)
+    public function setFields(Fields $fields = null)
     {
         $this->fields = $fields;
 
@@ -135,7 +137,7 @@ class FieldsPages
     /**
      * Get fields
      *
-     * @return \Magere\Fields\Model\Fields 
+     * @return Fields
      */
     public function getFields()
     {
@@ -145,10 +147,10 @@ class FieldsPages
     /**
      * Set pages
      *
-     * @param \Magere\Fields\Model\Pages $pages
+     * @param Pages $pages
      * @return FieldsPages
      */
-    public function setPages(\Magere\Fields\Model\Pages $pages = null)
+    public function setPages(Pages $pages = null)
     {
         $this->pages = $pages;
 
@@ -158,7 +160,7 @@ class FieldsPages
     /**
      * Get pages
      *
-     * @return \Magere\Fields\Model\Pages 
+     * @return Pages
      */
     public function getPages()
     {

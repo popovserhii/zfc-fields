@@ -1,5 +1,5 @@
 <?php
-namespace Magere\Fields;
+namespace Popov\ZfcFields;
 
 return [
     'view_helpers' => [
@@ -11,33 +11,34 @@ return [
         ],
     ],
 
-    'service_manager' => [
+    'dependencies' => [
         'aliases' => [
-            'FieldsService' => 'Magere\Fields\Service\FieldsService',
-            'PagesService' => 'Magere\Fields\Service\PagesService',
-            'FieldsPagesService' => 'Magere\Fields\Service\FieldsPagesService',
+            'FieldsService' => Service\FieldsService::class,
+            'PagesService' => Service\PagesService::class,
+            'FieldsPagesService' => Service\FieldsPagesService::class,
         ],
-        'factories' => [
-            'Magere\Fields\Service\FieldsService' => function ($sm) {
+        /*'factories' => [
+            'Popov\ZfcFields\Service\FieldsService' => function ($sm) {
                 $em = $sm->get('Doctrine\ORM\EntityManager');
                 $service = \Magere\Agere\Service\Factory\Helper::create('fields/fields', $em);
 
                 return $service;
             },
-            'Magere\Fields\Service\PagesService' => function ($sm) {
+            'Popov\ZfcFields\Service\PagesService' => function ($sm) {
                 $em = $sm->get('Doctrine\ORM\EntityManager');
                 $service = \Magere\Agere\Service\Factory\Helper::create('fields/pages', $em);
 
                 return $service;
             },
-            'Magere\Fields\Service\FieldsPagesService' => function ($sm) {
+            'Popov\ZfcFields\Service\FieldsPagesService' => function ($sm) {
                 $em = $sm->get('Doctrine\ORM\EntityManager');
                 $service = \Magere\Agere\Service\Factory\Helper::create('fields/fieldsPages', $em);
 
                 return $service;
             },
-        ],
+        ],*/
     ],
+
     // Doctrine config
     'doctrine' => [
         'driver' => [
