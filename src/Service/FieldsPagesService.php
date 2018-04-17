@@ -3,28 +3,33 @@ namespace Popov\ZfcFields\Service;
 
 use Doctrine\ORM\EntityRepository,
 	Magere\Agere\Service\AbstractEntityService;
+use Popov\ZfcCore\Service\DomainServiceAbstract;
+use Popov\ZfcFields\Model\FieldsPages;
 
-class FieldsPagesService extends AbstractEntityService {
+class FieldsPagesService extends DomainServiceAbstract {
 
 	protected $_repositoryName = 'fieldsPages';
 
+    protected $entity = FieldsPages::class;
 
 	/**
 	 * @param $page, example 'controller/action'
 	 * @param string $fieldToArray
 	 * @return array
 	 */
-	public function getFieldsByPage($page = '', $fieldToArray = '')
+	public function getFieldsByPage($page = ''/*, $fieldToArray = ''*/)
 	{
 		/** @var \Popov\ZfcFields\Model\Repository\FieldsPagesRepository $repository */
-		$repository = $this->getRepository($this->_repositoryName);
+		$repository = $this->getRepository();
 
 		$items = $repository->findFieldsByPage($page);
 
-		if ($fieldToArray != '')
+		/*if ($fieldToArray != '')
 		{
-			$items = $this->toArrayKeyField($fieldToArray, $items, true);
-		}
+			//$items = $this->toArrayKeyField($fieldToArray, $items, true);
+            //$itemsPageBind = $servicePageBind->toArrayKeyField('childrenId', $itemsPageBind, true);
+            $itemsPageBind = $simpler->setContext($itemsPageBind)->asAssociate('childrenId', true);
+		}*/
 
 		return $items;
 	}
@@ -37,7 +42,7 @@ class FieldsPagesService extends AbstractEntityService {
 	public function getFieldsByIds(array $ids, $valToArray = '')
 	{
 		/** @var \Popov\ZfcFields\Model\Repository\FieldsPagesRepository $repository */
-		$repository = $this->getRepository($this->_repositoryName);
+		$repository = $this->getRepository();
 
 		$items = $repository->findFieldsByIds($ids);
 
@@ -55,7 +60,7 @@ class FieldsPagesService extends AbstractEntityService {
 	public function getNotAddPermission()
 	{
 		/** @var \Popov\ZfcFields\Model\Repository\FieldsPagesRepository $repository */
-		$repository = $this->getRepository($this->_repositoryName);
+		$repository = $this->getRepository();
 
 		return $repository->findNotAddPermission();
 	}
