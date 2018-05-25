@@ -22,5 +22,11 @@
     "psr-4": {
       "Popov\\ZfcFields\\": "src/"
     }
-  }
+  },
+  "extra": {
+    "zf": {
+      "component": "Popov\\ZfcFields",
+      "config-provider": "Popov\\ZfcFields\\ConfigProvider"
+    }
+  }  
 }
