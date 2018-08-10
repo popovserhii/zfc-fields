@@ -2,7 +2,7 @@
 namespace Popov\ZfcFields\Model\Repository;
 
 use Doctrine\ORM\Query\ResultSetMapping;
-use Popov\ZfcCore\Service\EntityRepository;
+use Popov\ZfcCore\Model\Repository\EntityRepository;
 
 class FieldsPagesRepository extends EntityRepository {
 

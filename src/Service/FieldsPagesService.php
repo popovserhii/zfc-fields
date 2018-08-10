@@ -1,8 +1,7 @@
 <?php
 namespace Popov\ZfcFields\Service;
 
-use Doctrine\ORM\EntityRepository,
-	Magere\Agere\Service\AbstractEntityService;
+use Doctrine\ORM\EntityRepository;
 use Popov\ZfcCore\Service\DomainServiceAbstract;
 use Popov\ZfcFields\Model\FieldsPages;
 
