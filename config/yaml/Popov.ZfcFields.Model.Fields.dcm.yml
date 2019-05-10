@@ -1,6 +1,7 @@
 Popov\ZfcFields\Model\Fields:
   type: entity
   table: fields
+  repositoryClass: Popov\ZfcFields\Model\Repository\FieldsRepository
   fields:
     id:
       id: true

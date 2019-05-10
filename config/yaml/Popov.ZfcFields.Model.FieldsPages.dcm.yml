@@ -1,6 +1,6 @@
 Popov\ZfcFields\Model\FieldsPages:
   type: entity
-  repositoryClass: \Popov\ZfcFields\Model\Repository\FieldsPagesRepository
+  repositoryClass: Popov\ZfcFields\Model\Repository\FieldsPagesRepository
   table: fields_pages
   fields:
     id:

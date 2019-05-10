@@ -4,13 +4,13 @@ namespace Popov\ZfcFields\Model\Repository;
 use Doctrine\ORM\Query\ResultSetMapping;
 use	Doctrine\ORM\Query\ResultSetMappingBuilder;
 use Popov\ZfcCore\Model\Repository\EntityRepository;
-
+use Popov\ZfcFields\Model\Fields;
 
 class FieldsRepository extends EntityRepository {
 
-	protected $_table = 'fields';
-	protected $_alias = 'f';
+    protected $_table = Fields::TABLE;
 
+    protected $_alias = Fields::MNEMO;
 
 	/**
 	 * @param string $entityMnemo

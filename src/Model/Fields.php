@@ -11,6 +11,10 @@ use Popov\ZfcFields\Model\FieldsPages;
  */
 class Fields
 {
+    const MNEMO = 'fields';
+
+    const TABLE = 'fields';
+
 	/**
 	 * @var integer
 	 */

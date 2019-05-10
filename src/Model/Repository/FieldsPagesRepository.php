@@ -3,14 +3,18 @@ namespace Popov\ZfcFields\Model\Repository;
 
 use Doctrine\ORM\Query\ResultSetMapping;
 use Popov\ZfcCore\Model\Repository\EntityRepository;
+use Popov\ZfcFields\Model\Fields;
+use Popov\ZfcFields\Model\FieldsPages;
 
 class FieldsPagesRepository extends EntityRepository {
 
-	protected $_table = 'fields_pages';
-	protected $_alias = 'fp';
-	protected $_typePermission = 'field';
-	protected $_typeFieldPermission = 'permission';
+	protected $_table = FieldsPages::TABLE;
 
+	protected $_alias = Fields::MNEMO;
+
+	protected $_typePermission = 'field';
+
+	protected $_typeFieldPermission = 'permission';
 
 	/**
 	 * @param string $page, example 'controller/action'
@@ -98,5 +102,4 @@ class FieldsPagesRepository extends EntityRepository {
 
 		return $query->getResult();
 	}
-
 }

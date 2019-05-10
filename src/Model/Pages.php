@@ -10,6 +10,10 @@ use Popov\ZfcPermission\Model\PermissionSettingsPages;
  */
 class Pages
 {
+    const MNEMO = 'pages';
+
+    const TABLE = 'pages';
+
     /**
      * @var integer
      */
@@ -42,7 +46,7 @@ class Pages
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -65,7 +69,7 @@ class Pages
     /**
      * Get page
      *
-     * @return string 
+     * @return string
      */
     public function getPage()
     {
@@ -98,7 +102,7 @@ class Pages
     /**
      * Get fieldsPages
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getFieldsPages()
     {
@@ -131,7 +135,7 @@ class Pages
     /**
      * Get permissionSettingsPages
      *
-     * @return \Doctrine\Common\Collections\Collection 
+     * @return \Doctrine\Common\Collections\Collection
      */
     public function getPermissionSettingsPages()
     {

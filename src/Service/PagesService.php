@@ -1,11 +1,15 @@
 <?php
+
 namespace Popov\ZfcFields\Service;
 
-use Doctrine\ORM\EntityRepository,
-	Magere\Agere\Service\AbstractEntityService;
+use Popov\ZfcFields\Model\Pages;
+use Popov\ZfcFields\Model\Repository\PagesRepository;
+use Popov\ZfcCore\Service\DomainServiceAbstract;
 
-class PagesService extends AbstractEntityService {
-
-	protected $_repositoryName = 'pages';
-
+/**
+ * @method PagesRepository getRepository()
+ */
+class PagesService extends DomainServiceAbstract
+{
+    protected $entity = Pages::MNEMO;
 }
